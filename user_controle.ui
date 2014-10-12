@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>user_controle</class>
+ <widget class="QDialog" name="user_controle">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>RRaptor </string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>251</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ручное управление (расширенные возожности):</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>1021</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>40</y>
+     <width>20</width>
+     <height>711</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>491</width>
+     <height>712</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_x">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Двигатель X:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="motorX_enable">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Включить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>300</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_value_x">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="text">
+           <string>Величина:</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_dimension_x">
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_speed_x">
+          <property name="text">
+           <string>Скорость:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="move_up_x">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Вперед</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_speed_dimension_x">
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="dimension_x">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="duplicatesEnabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Градусы</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Обороты</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Миллиметры</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Секунды</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Бесконечно</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QRadioButton" name="move_down_x">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Назад</string>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDoubleSpinBox" name="speed_x">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="speed_dimension_x">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>мм/мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>об./мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDoubleSpinBox" name="value_x">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSlider" name="horizontalSlider_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Пуск</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_y">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Двигатель Y:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="motorY_enable">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Включить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>300</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_value_y">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="text">
+           <string>Величина:</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_dimension_y">
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_speed_y">
+          <property name="text">
+           <string>Скорость:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="move_up_y">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Вперед</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_speed_dimension_y">
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="dimension_y">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="duplicatesEnabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Градусы</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Обороты</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Миллиметры</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Секунды</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Бесконечно</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QRadioButton" name="move_down_y">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Назад</string>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDoubleSpinBox" name="speed_y">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="speed_dimension_y">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>мм/мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>об./мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDoubleSpinBox" name="valu_y">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSlider" name="horizontalSlider">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Пуск</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinAndMaxSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_z">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Двигатель Z:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="motorZ_enable">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Включить</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>300</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_value_z">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string>Величина:</string>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_dimension_z">
+            <property name="text">
+             <string>Размерность:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_speed_z">
+            <property name="text">
+             <string>Скорость:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QRadioButton" name="move_up_z">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Вперед</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="label_speed_dimension_z">
+            <property name="text">
+             <string>Размерность:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="dimension_z">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="duplicatesEnabled">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>Градусы</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Обороты</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Миллиметры</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Секунды</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Бесконечно</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QRadioButton" name="move_down_z">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Назад</string>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QDoubleSpinBox" name="speed_z">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>10000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="speed_dimension_z">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>мм/мин</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>об./мин</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>мм./сек</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>мм./сек</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QDoubleSpinBox" name="value_z">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QSlider" name="horizontalSlider_3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Пуск</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_6">
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="midLineWidth">
+       <number>40</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_10">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_z_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Двигатель стола:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="motorZ_enable_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Включить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>270</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QDoubleSpinBox" name="value_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSlider" name="horizontalSlider_5">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Пуск</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_value_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="text">
+           <string>Величина:</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_dimension_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_speed_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Скорость:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="move_up_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Вперед</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_speed_dimension_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="dimension_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="duplicatesEnabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Градусы</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Обороты</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Миллиметры</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Секунды</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Бесконечно</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QRadioButton" name="move_down_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Назад</string>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDoubleSpinBox" name="speed_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="speed_dimension_z_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>мм/мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>об./мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_11">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_z_3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Двигатель стойки:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="motorZ_enable_3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Включить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>270</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_value_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="text">
+           <string>Величина:</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_dimension_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_speed_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Скорость:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="move_up_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Вперед</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_speed_dimension_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="dimension_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="duplicatesEnabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Градусы</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Обороты</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Миллиметры</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Секунды</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Бесконечно</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QRadioButton" name="move_down_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Назад</string>
+          </property>
+          <property name="autoRepeat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDoubleSpinBox" name="speed_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="speed_dimension_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>мм/мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>об./мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>мм./сек</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDoubleSpinBox" name="value_z_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSlider" name="horizontalSlider_6">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Пуск</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>40</y>
+     <width>511</width>
+     <height>711</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_12">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinAndMaxSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_table">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Двигатель экструдера:</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="motorX_enable_2">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Включить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>250</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_dimension_table">
+            <property name="text">
+             <string>Размерность:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_table_value">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string>Величина:</string>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_speed_table">
+            <property name="text">
+             <string>Скорость:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QRadioButton" name="move_up_table">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Вперед</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="label_speed_dimension_table">
+            <property name="text">
+             <string>Размерность:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="dimension_table">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="duplicatesEnabled">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>Градусы</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Обороты</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Миллиметры</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Секунды</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Бесконечно</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QRadioButton" name="move_down_table">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Назад</string>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QDoubleSpinBox" name="speed_table">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>10000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="speed_dimension_table">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>мм/мин</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>об./мин</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>мм./сек</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QDoubleSpinBox" name="value_table">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QSlider" name="horizontalSlider_4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Пуск</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>5</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Нагрев:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Вкл. нагрев</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Выкл. нагрев</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_9">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Настройки вращения шпинделя:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDial" name="dial">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QCheckBox" name="motorX_enable_3">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Включить</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Скорость вращения:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Размерность:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>об./мин</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>об./сек</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>5</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>28</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Запуск:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Вкл. </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Выкл. </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_15">
+      <item>
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="text">
+         <string>Пуск</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="text">
+         <string>Стоп</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="text">
+         <string>Применить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
